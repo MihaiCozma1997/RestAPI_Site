@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - MyShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+        <a href="{{ url_for('home') }}" class="site-name">MyShop.Com</a>
+        <button class="link-button" id="logout-btn">Logout</button>
+    </header>
+
+    <h2>Your Products</h2>
+    <div id="user-products-container" class="product-grid"></div>
+
+    <h2>Update Product</h2>
+    <form id="update-product-form">
+        <input type="hidden" id="product-id">
+        <input type="text" id="update-name" placeholder="Product Name">
+        <input type="number" id="update-price" placeholder="Price">
+        <input type="text" id="update-description" placeholder="Description">
+        <button type="submit">Update Product</button>
+    </form>
+
+    <script src="static/update_product.js"></script>
+</body>
+</html>

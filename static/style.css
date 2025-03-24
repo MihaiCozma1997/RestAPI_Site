@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-image: url('background.jpg');
+    background-size: cover;      /* Ensures the image covers the whole screen */
+    background-position: center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the background in place while scrolling */
+}
+/* Styling for header */
+header {
+    width: 100%;
+    background-image: url('header.jpg');
+    display: flex;
+    padding: 20px 5px;         /* Padding top and bottom */
+    text-align: center;      /* Center align text */
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Places content (e.g., the button) on the left and right */
+}
+
+.link-button {
+    background-color: #c95e58;
+    color: black;
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding for better clickability */
+    font-size: 16px; /* Font size */
+    font-family: 'Segoe UI'; /* Change the font family */
+    cursor: pointer; /* Change the cursor to pointer to indicate it's clickable */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-decoration: none; /* Removes the underline from the link */
+}
+
+.link-button:hover {
+    background-color: #fedcac; /* Slightly darker green when hovered */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.site-name {
+    font-size: 24px;         /* Size of the site name */
+    font-weight: bold;       /* Make the site name bold */
+    font-family: 'Segoe UI'; /* Change the font family */
+    color: #cc6666;
+    text-decoration: none;
+}
+.site-name:hover{
+    color: #993333;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fce4c2;
+    color: #ffa036;
+    text-align: center;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #ffcc99;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering trick */
+}
+
+/* Form Title */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 0 10px;
+    max-width: 300px;  /* Adjust this value to make it smaller */
+}
+/* Labels */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #cc6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #993333;
+}
+
+.btn-register {
+    color:#cc6666 ;
+    font-family: 'Segoe UI';
+    text-decoration: none;
+}
+
+.btn-register:hover{
+    color: #993333;
+}
+
+/* Center the register box */
+.register-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #ffcc99;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style the form fields */
+.register-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.register-container label {
+    display: block;
+    font-weight: bold;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* add product Container */
+.form-container {
+    background-color: #ffcc99;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering trick */
+}
+
+.modal {
+    display: none;
+    border: none; /* Remove default border */
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-content {
+    background-color: #ffcf90;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 5% auto;  /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;  /* Adjust the width of the modal */
+    max-width: 500px;  /* Limit the max width */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Input Fields */
+#review-rating {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* h3 on left, X on right */
+    align-items: center;
+    margin-bottom: 10px; /* spacing below header */
+}
+
+/* Optional: refine h3 spacing */
+.modal-header h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.close-btn {
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.review-button {
+    background-color: #c95e58;
+    color: black;
+    border: none; /* Remove default border */
+    padding: 0px 5px; /* Add padding for better clickability */
+    font-size: 16px; /* Font size */
+    font-family: 'Segoe UI'; /* Change the font family */
+    cursor: pointer; /* Change the cursor to pointer to indicate it's clickable */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.review-button:hover {
+    background-color: #fedcac; /* Slightly darker green when hovered */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+#review-comment {
+    width: 100%;                  /* Make it stretch to fit parent width */
+    max-width: 100%;              /* Prevent going beyond parent */
+    height: 100px;                /* Set initial height */
+    max-height: 150px;            /* Max height before scrolling inside */
+    resize: none;                 /* Disable resizing completely */
+
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;       /* Include padding in width/height */
+    overflow-y: auto;             /* Scroll if content overflows vertically */
+}
+
+/* Styling for the stars */
+.star-rating-inner {
+    display: flex;
+    justify-content: initial;
+    margin-bottom: 10px;
+    font-size: 20px; /* Size of the stars */
+    color: #000000;  /* Default color for inactive stars (black) */
+    cursor: pointer;
+}
+
+.star-rating-inner i {
+    transition: color 0.3s ease; /* Smooth transition when the color changes */
+}
+
+/* Style for selected stars */
+.star-rating-inner i.selected {
+    color: #e0a402;  /* Gold color when the star is selected */
+}
+
+/* Hover effect for individual stars */
+.star-rating-inner i.hovered {
+    color: #f5b301; /* Gold on hover */
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    color: #0056b3;
+}
+
+#reviews-list {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;   /* Prevent horizontal scrollbar */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Space between reviews */
+}
+
+.review-item {
+    background-color: #fff8e7;  /* Light background */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+.review-item strong {
+    color: #c95e58;  /* Accent color */
+}
