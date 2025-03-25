@@ -1,5 +1,5 @@
 from conf_test import driver
-import time
+import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -12,6 +12,7 @@ def get_user():
         return username, password
 
 
+@pytest.mark.run(order=2)
 def test_login_user(driver):
     # Launch your Flask app (assuming it’s already running on localhost:5000)
     driver.get('http://127.0.0.1:5000/loginPage')

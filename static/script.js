@@ -105,7 +105,7 @@ function fetchProducts() {
                 let productHTML = `
                     <h3>${product.name}</h3>
                     <p><strong>Price:</strong> $${product.price}</p>
-                    <p>${product.description}</p>
+                    <p id='description'>${product.description}</p>
                     <div class="rating-display">
                         ${starsHTML}
                         <span class="clickable" onclick="showReviewsPopup(${product.id})">
