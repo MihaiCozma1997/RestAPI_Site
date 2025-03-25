@@ -12,7 +12,7 @@ def get_user():
         return username, password
 
 
-def test_login_user(driver):
+def test_add_product_user(driver):
     # Launch your Flask app (assuming it’s already running on localhost:5000)
     driver.get('http://127.0.0.1:5000/loginPage')
 
